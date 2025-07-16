@@ -1,0 +1,469 @@
+<html lang="pt-BR" data-ng-app="app" ng-strict-di="" ng-controller="AppCtrl" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths ng-scope"><head><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">[uib-tooltip-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-html-popup].tooltip.right-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.top-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-left > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.bottom-right > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.left-bottom > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-top > .tooltip-arrow,[uib-tooltip-template-popup].tooltip.right-bottom > .tooltip-arrow,[uib-popover-popup].popover.top-left > .arrow,[uib-popover-popup].popover.top-right > .arrow,[uib-popover-popup].popover.bottom-left > .arrow,[uib-popover-popup].popover.bottom-right > .arrow,[uib-popover-popup].popover.left-top > .arrow,[uib-popover-popup].popover.left-bottom > .arrow,[uib-popover-popup].popover.right-top > .arrow,[uib-popover-popup].popover.right-bottom > .arrow,[uib-popover-html-popup].popover.top-left > .arrow,[uib-popover-html-popup].popover.top-right > .arrow,[uib-popover-html-popup].popover.bottom-left > .arrow,[uib-popover-html-popup].popover.bottom-right > .arrow,[uib-popover-html-popup].popover.left-top > .arrow,[uib-popover-html-popup].popover.left-bottom > .arrow,[uib-popover-html-popup].popover.right-top > .arrow,[uib-popover-html-popup].popover.right-bottom > .arrow,[uib-popover-template-popup].popover.top-left > .arrow,[uib-popover-template-popup].popover.top-right > .arrow,[uib-popover-template-popup].popover.bottom-left > .arrow,[uib-popover-template-popup].popover.bottom-right > .arrow,[uib-popover-template-popup].popover.left-top > .arrow,[uib-popover-template-popup].popover.left-bottom > .arrow,[uib-popover-template-popup].popover.right-top > .arrow,[uib-popover-template-popup].popover.right-bottom > .arrow{top:auto;bottom:auto;left:auto;right:auto;margin:0;}[uib-popover-popup].popover,[uib-popover-html-popup].popover,[uib-popover-template-popup].popover{display:block !important;}</style><style type="text/css">.uib-datepicker-popup.dropdown-menu{display:block;float:none;margin:0;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.uib-position-measure{display:block !important;visibility:hidden !important;position:absolute !important;top:-9999px !important;left:-9999px !important;}.uib-position-scrollbar-measure{position:absolute !important;top:-9999px !important;width:50px !important;height:50px !important;overflow:scroll !important;}.uib-position-body-scrollbar-measure{overflow:scroll !important;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-left,.uib-right{width:100%}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style> <meta http-equiv="content-type" content="text/html;charset=UTF-8"> <meta charset="utf-8"> <title ncy-breadcrumb-text=" | Studeo Unicesumar" ncy-breadcrumb-text-separator=" > " class="ng-binding ng-isolate-scope">Login | Studeo Unicesumar</title> <meta name="description" content="Conheça o Studeo Unicesumar. Seu ambiente virtual de aprendizagem. A Unicesumar - Centro Universitário Cesumar investe na melhoria da qualidade do ensino, sempre atenta às necessidades e anseios da região."> <meta name="keywords" content="studeo unicesumar, nova ava, ava, ambiente virtual de aprendizagem, área do aluno"> <meta name="author" content="Unicesumar"> <meta name="robots" content="index, follow"> <meta property="fb:app_id" content="377112039380671"> <meta property="og:site_name" content="Studeo Unicesumar"> <meta property="og:url" content="https://studeo.unicesumar.edu.br/"> <meta property="og:type" content="website"> <meta property="og:title" content="Login - Studeo Unicesumar | Ambiente Virtual de Aprendizagem"> <meta property="og:description" content="Conheça o Studeo Unicesumar. Seu ambiente virtual de aprendizagem. A Unicesumar - Centro Universitário Cesumar investe na melhoria da qualidade do ensino, sempre atenta às necessidades e anseios da região."> <meta property="og:image" content="https://studeostatic.unicesumar.edu.br/img/unicesumar-studeo-og-imagem-facebook.jpg"> <meta property="og:image:url" content="https://studeostatic.unicesumar.edu.br/img/unicesumar-studeo-og-imagem-facebook.jpg"> <meta property="og:image:type" content="image/jpeg"> <meta property="og:image:width" content="800"> <meta property="og:image:height" content="600"> <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes"> <link rel="manifest" href="manifest.14fddf29.json"> <meta name="google" value="notranslate"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-touch-fullscreen" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="theme-color" content="#00dbf2"> <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-644124327&amp;cx=c&amp;gtm=45je57f0v896270057za200zb79466653&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104908321~104908323"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/destination?id=AW-832736021&amp;cx=c&amp;gtm=45je57f0v896270057za200zb79466653&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104908321~104908323"></script><script src="https://connect.facebook.net/signals/config/629364580481796?v=2.9.216&amp;r=stable&amp;domain=studeo.unicesumar.edu.br&amp;hme=0d2c2eb2669df120d9f277453f8987d9c2d55affb793f9f745ec25e01f4e8872&amp;ex_m=83%2C143%2C124%2C18%2C117%2C58%2C40%2C118%2C64%2C57%2C131%2C72%2C13%2C82%2C26%2C112%2C103%2C62%2C65%2C111%2C128%2C91%2C133%2C7%2C3%2C4%2C6%2C5%2C2%2C73%2C81%2C134%2C205%2C155%2C52%2C210%2C207%2C208%2C45%2C169%2C25%2C61%2C214%2C213%2C157%2C28%2C51%2C8%2C54%2C77%2C78%2C79%2C84%2C107%2C27%2C24%2C110%2C106%2C105%2C125%2C63%2C127%2C126%2C41%2C108%2C50%2C100%2C12%2C130%2C37%2C196%2C198%2C165%2C21%2C22%2C23%2C15%2C16%2C36%2C33%2C34%2C68%2C74%2C76%2C89%2C116%2C119%2C38%2C90%2C19%2C17%2C94%2C59%2C31%2C121%2C120%2C122%2C113%2C20%2C30%2C49%2C88%2C129%2C29%2C179%2C151%2C86%2C109%2C67%2C98%2C44%2C39%2C96%2C97%2C102%2C48%2C14%2C104%2C95%2C55%2C43%2C46%2C0%2C80%2C132%2C1%2C101%2C11%2C99%2C254%2C194%2C141%2C182%2C175%2C9%2C47%2C75%2C53%2C123%2C56%2C93%2C71%2C70%2C42%2C114%2C69%2C66%2C60%2C92%2C85%2C35%2C115%2C32%2C87%2C10%2C135" async=""></script><script type="text/javascript" async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-2MG1FHRTHV&amp;cx=c&amp;gtm=45He57f0v79466653za200&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104908321~104908323"></script><script type="text/javascript" id="www-widgetapi-script" src="https://www.youtube.com/s/player/b7ed0796/www-widgetapi.vflset/www-widgetapi.js" async=""></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KZW3C4H"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="/ruxitagentjs_ICANVfghqrux_10317250630095842.js" data-dtconfig="rid=RID_2418|rpid=-1986681157|domain=unicesumar.edu.br|reportUrl=/rb_bf10933whx|app=87c42b80508cf1dd|cuc=asx9dndv|owasp=1|mel=100000|featureHash=ICANVfghqrux|md=mdcc1=abody ^rb div.full-height.ng-scope ^rb div ^rb div.ng-scope ^rb div ^rb div.pull-right.ng-isolate-scope ^rb div ^rb uni-user-menu ^rb div ^rb ul ^rb li.padding-20.m-b-10.bg-master-lighter ^rb dl ^rb dd:nth-child(3),mdcc2=abody ^rb div.full-height.ng-scope ^rb div ^rb div.ng-scope ^rb div ^rb div.pull-right.ng-isolate-scope ^rb div ^rb uni-user-menu ^rb div ^rb ul ^rb li.padding-20.m-b-10.bg-master-lighter ^rb dl ^rb dd:nth-child(3)|lastModification=1752086557041|srsr=1000|tp=500,50,0|rdnt=1|uxrgce=1|agentUri=/ruxitagentjs_ICANVfghqrux_10317250630095842.js"></script><!-- ngIf: false --> <script src="//cdn1.readspeaker.com/script/11962/webReader/webReader.js?pids=wr&amp;dload=DocReader.AutoAdd" type="text/javascript"></script><link id="rsmod_Styles" type="text/css" rel="stylesheet" href="//cdn1.readspeaker.com/script/11962/webReader/r/r2728/ReadSpeaker.Styles-Button.css?v=3.8.7.2728"><script id="rsdloaded_readspeaker0" type="text/javascript" src="//cdn1.readspeaker.com/script/11962/webReader/ReadSpeaker.DocReader.AutoAdd.js?v=3.8.7.2728"></script> <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <link rel="stylesheet" href="bundle/css/bundle.min.15203523.css?time=1752688484"><style></style><style>.cke{visibility:hidden;}</style><style></style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" async="" src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/832736021/?random=1752688485636&amp;cv=11&amp;fst=1752688485636&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be57f0z879466653za200zb79466653&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104908321~104908323&amp;u_w=800&amp;u_h=600&amp;url=https%3A%2F%2Fstudeo.unicesumar.edu.br%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20%7C%20Studeo%20Unicesumar&amp;npa=0&amp;pscdl=noapi&amp;auid=974691786.1752688485&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.101%7CGoogle%2520Chrome%3B138.0.7204.101&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;_tu=Cg&amp;rfmt=3&amp;fmt=4"></script></head> <body class="fixed-header windows desktop ng-isolate-scope menu-pin" ng-class="{ 'menu-pin' : app.layout.menuPin, 'menu-behind' : app.layout.menuBehind, 'access-as': isAccessAs() }" walkthrough="" wt-start="wtStart" wt-next="wtNext" wt-prev="wtPrev" wt-cancel="wtCancel" wt-active="wtActive" data-rsevent-id="rs_688697"><div id="MathJax_Message" style="display: none;"></div> <!-- uiView: --><div class="full-height ng-scope" ui-view="" style=""><!-- uiView: --><ui-view class="ng-scope"><style class="ng-scope">.home-container{background:url(https://studeostatic.unicesumar.edu.br/img/main-home-studeo.webp) no-repeat;background-size:cover;height:100%}.home-slogan{font-size:4.115em;font-size:3.6vw;letter-spacing:.0025em;line-height:normal;padding-top:1em;padding-left:10px;color:#005387}.home-glass{opacity:.8}.logo-studeo{width:440px;height:220px;background:url(https://studeostatic.unicesumar.edu.br/img/uni-logo-studeo.webp) no-repeat;background-size:370px;display:flex;transition:all 150ms ease;background-position-x:27px;background-position-y:65px}.animated{animation-duration:1s;animation-fill-mode:both;animation-delay:1s}.tada{animation-name:tada}.info-text-home{display:flex;align-items:center;justify-content:center;text-decoration:none;font-weight:700;font-size:16px;padding-top:10px;padding-left:11px;color:#005387;letter-spacing:-.5px}.info-text-home{background-color:#fff;opacity:.8}.login-info-studeo{display:flex;align-items:center;justify-content:center;color:#005387cc;letter-spacing:-.5px;font-weight:700;font-size:16px;padding-bottom:10px}.form-login-studeo .form-group{border:3px solid #00dbf2;border-radius:20px}.form-login-studeo .label-login{color:#005387;font-weight:700}.row button{border-radius:16px}#login-form-studeo{display:flex;align-items:center;justify-content:center;flex-direction:column}@keyframes tada{from{transform:scale3d(1,1,1)}10%,20%{transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)}30%,50%,70%,90%{transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)}40%,60%,80%{transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);background-color:#fff800}to{transform:scale3d(1,1,1);background-color:#fff800}}@media only screen and (max-width:767px) and (orientation:landscape){.logo-studeo{width:275px;height:88px;background:url(https://studeostatic.unicesumar.edu.br/img/uni-logo-studeo.webp) no-repeat;background-size:258px;display:inline-block}}.home-bottom-img{background-size:60%}@media only screen and (min-width:1600px){.home-slogan{font-size:4.115em;letter-spacing:.0025em;line-height:normal;color:#005387;padding-top:1em}}.contingencia{padding-top:35px}@media (max-width:1280px){.pull-bottom{display:none}.home-slogan{scale:.9;padding-left:70px}.info-text-home{scale:.9;padding-left:70px}#row-form{scale:.8}@media (max-width:1100px){.pull-bottom{display:none}.home-slogan{scale:.9;padding-left:70px}.info-text-home{scale:.9;padding-left:70px}#row-form{scale:.7;margin-top:-80px}}@media (max-width:960px){.pull-bottom{display:none}.home-slogan{scale:.9;padding-left:0}.info-text-home{scale:.9;padding-left:0}#row-form{scale:.6;margin-top:-80px}@media (max-width:768px){.pull-bottom{display:none}.home-slogan{scale:.8;padding-left:70px}.info-text-home{scale:.8;padding-left:70px}#row-form{scale:.6;margin-top:-80px}}}}</style> <div class="home-container ng-scope"> <div class="pull-bottom full-width bg-white home-glass text-center p-t-10 p-b-10"> <img lazy-img="https://studeostatic.unicesumar.edu.br/img/logo-bottom-std.png" alt="" src="https://studeostatic.unicesumar.edu.br/img/logo-bottom-std.png"> </div> <div class="full-height"> <div class="container home-bottom-img full-height p-t-10"> <div class="row-home"> <!-- ngIf: $ctrl.htmlContingencia != null --> <!-- ngIf: $ctrl.htmlContingencia == null --><div class="hidden-xs col-sm-6 ng-scope" ng-if="$ctrl.htmlContingencia == null"> <div class="home-slogan home-glass font-studeo bold"> Seu<br> ambiente<br> virtual de<br> aprendizagem<br> </div> <div class="info-text-home"> <span class="text-info-home-studeo">A Universidade Unicesumar investe na melhoria da qualidade do ensino, sempre atenta às necessidades e anseios da região.</span> </div> </div><!-- end ngIf: $ctrl.htmlContingencia == null --> </div> <div class="col-xs-offset-1 col-xs-10 col-sm-6 col-sm-offset-0"> <div class="row" id="row-form"> <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-7" id="login-form-studeo"> <!-- ngIf: $ctrl.htmlContingencia != null --> <div class="text-center"> <div class="logo-studeo"></div> </div> <div ng-show="$ctrl.disableForm" class="ng-hide"> <div class="text-center m-t-60"> <div class="progress-circle-indeterminate"></div> <br> <p class="small hint-text ng-binding" role="status" aria-live="polite" ng-bind="$ctrl.loadingMessage"></p> </div> </div> <div ng-hide="$ctrl.disableForm"> <span class="login-info-studeo">Entre com sua conta do Studeo ou CPF</span> <form class="form-login-studeo ng-pristine ng-invalid ng-invalid-required" name="formLogin" role="form" novalidate="" ng-submit="$ctrl.login()"> <div pg-form-group="" class="form-group form-group-default home-glass b-b b-t-0 b-r-0 b-l-0 focused" ng-class="{ 'has-error required text-danger' : formLogin.username.$invalid &amp;&amp; !formLogin.username.$pristine }"> <label class="label-login" for="username">Usuário/CPF</label> <div class="controls"> <input type="text" name="username" id="username" placeholder="Digite o usuário" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" ng-model="$ctrl.user.username" autocomplete="username" required="" autofocus=""> </div> </div> <div pg-form-group="" class="form-group form-group-default home-glass b-b b-t-0 b-r-0 b-l-0" ng-class="{ 'has-error required text-danger' : formLogin.password.$invalid &amp;&amp; !formLogin.password.$pristine }"> <label class="label-login" for="password">Senha</label> <div class="controls"> <input type="password" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" name="password" id="password" placeholder="Digite a senha" ng-model="$ctrl.user.password" autocomplete="current-password" required=""> </div> </div> <div class="row"> <div class="col-sm-12"> <button class="btn btn-lg btn-studeo btn-block font-studeo all-caps fs-16 bold home-glass" type="submit" ng-disabled="formLogin.$invalid || $ctrl.disableForm" disabled="disabled">Entrar </button> </div> </div> <a href="https://app.unicesumar.edu.br/ead/forms/recuperar-senha/" target="_blank" class="padding-10 block text-black text-center m-t-10 bold bg-white home-glass" ng-class="{'animated tada': $ctrl.recoveryPw }" style="border-radius:16px;color:#005387">Esqueceu sua senha?</a> </form> </div> </div> </div> </div> </div> </div> </div> </ui-view></div> <!-- ngIf: false --> <script type="text/javascript">window.rsConf={general:{usePost:!0,forceLoadCoreWait:!0}},window.onload=function(){function e(e){var t=document.createElement("link");t.rel="stylesheet",t.href=e,document.head.appendChild(t)}function t(e,t){var a=document.createElement("script");a.type="text/javascript",a.async=!1,a.defer=!1,a.src=e,t&&a.addEventListener("load",t,!1),document.body.appendChild(a)}var a,n,o,s,c,r;e("bundle/css/bundle.min.15203523.css?time="+Math.floor(Date.now()/1e3)),-1!=navigator.appVersion.indexOf("Windows NT 6.2")&&e("br/edu/unicesumar/web-angular-layout/src/pages/css/windows.chrome.fix.38e75150.css?time="+Math.floor(Date.now()/1e3)),t("https://studeostatic.unicesumar.edu.br/code/mathjax-2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&delayStartupUntil=configured",function(){t("bundle/bundle.min.5cab1a84.js?time="+Math.floor(Date.now()/1e3))}),t("https://studeostatic.unicesumar.edu.br/code/ckeditor/ckeditor.js",function(){}),a=window,n=document,o="script",s="ga",a.GoogleAnalyticsObject=s,a.ga=a.ga||function(){(a.ga.q=a.ga.q||[]).push(arguments)},a.ga.l=1*new Date,c=n.createElement(o),r=n.getElementsByTagName(o)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",r.parentNode.insertBefore(c,r),ga("create","UA-10863773-23","auto"),function(e,t,a,n,o){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var s=t.getElementsByTagName(a)[0],c=t.createElement(a);c.async=!0,c.src="https://www.googletagmanager.com/gtm.js?id=GTM-KZW3C4H",s.parentNode.insertBefore(c,s)}(window,document,"script","dataLayer")}</script> <link rel="stylesheet" href="https://cdn.privacytools.com.br/public_api/banner/style/YAvl11014111.css?t=1">  <script type="text/javascript" src="https://cdn.privacytools.com.br/public_api/banner/script/bottom/YAvl11014111.js?t=1"></script> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZW3C4H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.64.0/adyen.js"></script> <link rel="stylesheet" href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.64.0/adyen.css">  <script type="text/javascript" src="https://studeostatic.unicesumar.edu.br/code/mathjax-2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML&amp;delayStartupUntil=configured"></script><script type="text/javascript" src="https://studeostatic.unicesumar.edu.br/code/ckeditor/ckeditor.js"></script><div id="byRemovePortal"><style type="text/css">
+    #ov_z349840300 {
+        display:none;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 99999999;
+        background-color:#000A;
+    }
+    #dp-preferences {
+        position: fixed;
+        margin-left: calc(50vw - 400px);
+        margin-top: calc(50vh - 310px);
+        min-width: 500px;
+        max-width: 800px;
+        max-height: 600px;
+        color: #26264A;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        background-color: #FFFFFF;
+        box-sizing: initial !important;
+        -webkit-box-sizing: border-box;box-sizing: border-box;-webkit-font-smoothing: antialiased;
+    }
+
+    #dp-preferences::after,
+    #dp-preferences::before,
+    #dp-preferences *,
+    #dp-preferences *::after,
+    #dp-preferences *::before {
+        box-sizing: initial !important;
+    }
+
+    .dp-preferences-topbar {
+        width: 100%;
+        height: 100px;
+        text-align: left;
+        display: flex;
+        border-bottom: 2px solid #26264A;
+        line-height: initial !important;
+    }
+
+    .dp-topbar-logo {
+        display:flex;
+        margin: 20px 20px 0px 20px;
+        min-width: 138px;
+        max-width: 250px;
+        max-height:85px;
+    }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+ .dp-topbar-logo {
+        display:block;
+        margin-top:43px;
+    }
+}
+
+    .dp-topbar-logo img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .dp-topbar-tabs {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dp-topbar-title-container {
+        display: flex;
+        width: 100%;
+        height: 76px;
+    }
+
+    .dp-topbar-close-container {
+        padding: 8px;
+    }
+
+    .dp-topbar-title {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .dp-tabs {
+        width: 100%;
+        height: 24px;
+        display: flex;
+    }
+
+    .dp-tab-item {
+        border-radius: 8px 8px 0px 0px;
+        background-color: #E0E0E0;
+        margin-right: 2px;
+        width: 100%;
+        padding-top: 5px;
+    }
+
+    .dp-selected-tab {
+        background-color: #FFF;
+        border: 1px solid #26264A;
+        height: 18px;
+    }
+
+    .dp-tab-item div {
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: bolder;
+    }
+
+    #dp-preferences-body {
+        display: flex;
+        min-width: 800px;
+    }
+
+    .dp-menu {
+        min-width: 200px;
+        min-height: 350px;
+        padding-top: 5px;
+        padding-left: 20px;
+    }
+
+    .dp-menu-item {
+        margin: 3px 0px;
+        vertical-align: middle;
+        background-color: #E0E0E0;
+        font-weight: bold;
+        display: block;
+        padding-left: 5px;
+    }
+
+    .dp-menu-item div {
+        padding: 10px 5px;
+    }
+
+    .dp-selected-menu div {
+        background-color: #fff;
+    }
+
+    .dp-content {
+        width: 100%;
+        min-height: 200px;
+        padding: 25px 10px 10px 40px;
+        text-align: left;
+        font-size: 0.8em;
+        overflow:auto;
+    }
+
+    .dp-cookie-group-description {
+        margin-bottom: 15px;
+        padding-right: 25px;
+    }
+
+    .dp-tab-content {
+        overflow: auto;
+        max-height: 290px;
+    }
+
+    .dp-cookie-content {
+        border-bottom: 1px solid #E8E7E7;
+        overflow: auto;
+        max-height: 230px;
+        padding-right: 25px;
+        margin-bottom: 30px;
+    }
+
+    .dp-group-cookie-action {
+        display: flex;
+        height: 30px;
+        margin-bottom: 15px;
+    }
+
+    .dp-group-cookie-action .action-title {
+        font-weight: bold;
+        width: 100%;
+        padding-top: 12px;
+        font-size: 1.1em;
+    }
+
+    .dp-cookie-list {
+        font-size: 1em;
+    }
+
+    .dp-cookie-list .cookie-description {
+        font-size: 0.8em;
+    }
+
+    .dp-cookie-action {
+        display: flex;
+        height: 22px;
+        margin-bottom: 10px;
+        border-top: 1px solid #E8E7E7;
+        padding-top: 15px;
+    }
+
+    .dp-cookie-action .cookie-name {
+        display: flex;
+        flex: 1;
+    }
+
+    .dp-cookie-action .dp-switch {
+        width: 62px;
+    }
+
+    #dp-preferences-footer {
+        /* height: 60px; */
+        background-color: #E8E7E7;
+        display: flex;
+        vertical-align: middle;
+        font-size: 0.8em;
+    }
+
+    #dp-preferences-footer .developed-by {
+        width: 100%;
+        text-align: left;
+        padding: 18px;
+    }
+
+    #dp-preferences a {
+        text-decoration: none;
+        color: #26264A
+    }
+
+    #dp-preferences-footer .developed-by a {
+        font-weight: bold;
+    }
+
+    #dp-preferences-footer .policies {
+        text-align: left;
+        padding: 12px;
+        font-size: 1.2em;
+        font-family: "Courier new", sans-serif;
+        width:100%;
+    }
+
+    #dp-preferences-footer .policies a {
+        font-size: 0.8em;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #dp-preferences-footer .save {
+    }
+
+    #dp-preferences-footer .save button {
+        border: none;
+        background-color: #2F98E9;
+        color: #fff;
+        padding: 8px 25px;
+        border-radius: 10px;
+        margin-top: 8px;
+        margin-right: 45px;
+        cursor: pointer;
+        font-size: 1rem !important;
+        word-break: normal;
+    }
+
+    .dp-close-button {
+        width: 100%;
+    }
+
+    .dp-group-cookie-action .dp-switch {
+        width: 65px;
+        height: 25px;
+    }
+
+    .dp-group-cookie-action .dp-slider {
+        height: 30px;
+        max-width: 64px;
+        min-width: 64px;
+    }
+
+    .dp-group-cookie-action .dp-slider.round {
+        border-radius: 12px !important;
+    }
+
+    .dp-group-cookie-action .dp-slider.round:before {
+        height: 27px;
+        width: 27px;
+    }
+
+    .dp-switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 21px;
+    }
+
+    /* Hide default HTML checkbox */
+    .dp-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .dp-slider-text {
+        padding-top: 2px;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    /* The slider */
+    .dp-slider {
+      position: absolute;
+      cursor: pointer;
+      height: 21px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+      min-width: 48px;
+      max-width: 48px;
+    }
+
+    .dp-slider:before {
+      position: absolute;
+      content: "";
+      left: 1px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .dp-slider {
+      background-color: #2196F3;
+    }
+
+    input:focus + .dp-slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    input:checked + .dp-slider-group:before {
+      -webkit-transform: translateX(34px) !important;
+      -ms-transform: translateX(34px) !important;
+      transform: translateX(34px) !important;
+      height: 28px !important;
+      width: 28px !important;
+      border: none;
+      bottom: 1px;
+    }
+
+    input:checked + .dp-slider:before {
+      -webkit-transform: translateX(27px);
+      -ms-transform: translateX(27px);
+      transform: translateX(27px);
+      height: 19px;
+      width: 19px;
+      border: none;
+      bottom: 1px;
+    }
+
+    /* Rounded sliders */
+    .dp-slider.round {
+      border-radius: 8px;
+    }
+
+    .dp-slider.round:before {
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      border-color: #26264A;
+      border-width: 2px;
+      border-style: solid;
+    }
+    
+</style>
+<div id="dp_content_obj2"><a id="revokedp12435" href="javascript:void(0)" class="cc-revoke" style="opacity: 0; display: none; background-color: rgb(255, 255, 255); color: rgb(138, 138, 138);"></a><div id="privacytools-banner-consent" role="dialog" aria-live="polite" aria-label="cookieconsent" aria-describedby="cookieconsent:desc" class="cc-window cc-banner cc-type-info cc-theme-block cc-bottom cc-color-override-419314289 " style=""><!--googleoff: all--><span aria-label="dismiss cookie message" style="color: #8a8a8a" onclick="javascript:clsBnnerPref();" tabindex="0" class="cc-close">×</span><div class="privacy-tools-layout">           <div class="dp-bar-description"><span id="cookieconsent:desc" style="color: rgb(138, 138, 138);" class="cc-message">Nós coletamos cookies para oferecer um serviço personalizado. Utilize as opções abaixo para configurar suas preferências quanto à coleta de cookies.</span><span style="display:none" aria-label="dismiss cookie message" id="dm876B" tabindex="0" class="cc-close">×</span></div>           <div class="dp-bar-actions"><div class="cc-compliance"><a aria-label="deny cookies" href="javascript:void(0)" tabindex="0" onclick="doNotSell()" class="cc-btn cc-deny" style="display:block"><div class="dp-bar-button" style="color: #8a8a8a" title="Rejeitar">Rejeitar</div></a></div><a aria-label="dismiss cookie message" id="dm876A" href="javascript:void(0)" onclick="enableAllCookies()" tabindex="0" class="cc-btn cc-dismiss"><div class="dp-bar-button dp-bar-dismiss" style="color: #8a8a8a" title="Aceitar">Aceitar</div></a><div class="dp-bar-preference"><a style="color: rgb(138, 138, 138);" aria-label="learn more about cookies" onclick="javascript:overlayT2345Preference();" tabindex="0" class="cc-link" href="javascript:void(null)" title="Preferências">Preferências</a></div></div>           </div><!--googleon: all--></div></div>
+<div id="dp_content_preference"></div>
+</div><script type="text/javascript" src="bundle/bundle.min.5cab1a84.js?time=1752688484"></script><iframe height="0" width="0" style="display: none; visibility: hidden;" data-gtm-yt-inspected-19="true"></iframe><script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","629364580481796");fbq("track","PageView");</script><iframe allow="join-ad-interest-group" data-tagging-id="AW-832736021" data-load-time="1752688485640" height="0" width="0" src="https://td.doubleclick.net/td/rul/832736021?random=1752688485636&amp;cv=11&amp;fst=1752688485636&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be57f0z879466653za200zb79466653&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104908321~104908323&amp;u_w=800&amp;u_h=600&amp;url=https%3A%2F%2Fstudeo.unicesumar.edu.br%2F&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20%7C%20Studeo%20Unicesumar&amp;npa=0&amp;pscdl=noapi&amp;auid=974691786.1752688485&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.101%7CGoogle%2520Chrome%3B138.0.7204.101&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;_tu=Cg" style="display: none; visibility: hidden;" data-gtm-yt-inspected-19="true"></iframe><iframe allow="join-ad-interest-group" data-tagging-id="AW-644124327/7b0bCN6WkPwBEKedkrMC" data-load-time="1752688485710" height="0" width="0" src="https://td.doubleclick.net/td/rul/644124327?random=1752688485689&amp;cv=11&amp;fst=1752688485689&amp;fmt=3&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=purchase&amp;gcl_ctr=1&amp;gtm=45be57f0z879466653za200zb79466653&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=101509157~103116026~103200004~103233427~103351869~103351871~104684208~104684211~104732253~104732255~104879961~104908321~104908323&amp;u_w=800&amp;u_h=600&amp;url=https%3A%2F%2Fstudeo.unicesumar.edu.br%2F&amp;label=7b0bCN6WkPwBEKedkrMC&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=Login%20%7C%20Studeo%20Unicesumar&amp;value=0&amp;bttype=purchase&amp;npa=0&amp;pscdl=noapi&amp;auid=974691786.1752688485&amp;uaa=x86&amp;uab=64&amp;uafvl=Not)A%253BBrand%3B8.0.0.0%7CChromium%3B138.0.7204.101%7CGoogle%2520Chrome%3B138.0.7204.101&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;fledge=1&amp;capi=1&amp;_tu=Cg&amp;ct_cookie_present=0" style="display: none; visibility: hidden;" data-gtm-yt-inspected-19="true"></iframe></body></html>

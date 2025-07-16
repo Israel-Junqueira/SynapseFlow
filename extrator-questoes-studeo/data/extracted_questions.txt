@@ -1,0 +1,133 @@
+QUESTÕES - ESTRUTURAS DE DADOS
+==================================================
+
+QUESTÃO 1
+--------------------
+Um dos temas que diferenciam a linguagem C das demais linguagens é a possibilidade de podermos manipular a memória de um dispositivo computacional através dos ponteiros. Com base no código apresentado, avalie as afirmações sobre ponteiros.
+
+ALTERNATIVAS:
+A) [ ] I, apenas.
+B) [ ] II, apenas.
+C) [ ] III, apenas.
+D) [X] I e II, apenas.
+E) [ ] II e III, apenas.
+
+==================================================
+
+QUESTÃO 2
+--------------------
+Sobre ponteiros em C, analise as afirmações sobre alocação dinâmica, tipos de dados e armazenamento de endereços.
+
+ALTERNATIVAS:
+A) [ ] I e II, apenas.
+B) [ ] III e IV, apenas.
+C) [ ] I, II e IV, apenas.
+D) [X] II, III e IV, apenas.
+E) [ ] I, II, III e IV.
+
+==================================================
+
+QUESTÃO 3
+--------------------
+Sobre structs em C, avalie o código apresentado e as afirmações sobre armazenamento de dados e sintaxe.
+
+ALTERNATIVAS:
+A) [ ] I, apenas.
+B) [ ] II, apenas.
+C) [ ] III, apenas.
+D) [X] I e II, apenas.
+E) [ ] II e III, apenas.
+
+==================================================
+
+QUESTÃO 4
+--------------------
+Sobre pilhas estáticas implementadas com vetores, avalie as afirmações sobre capacidade e funcionamento.
+
+ALTERNATIVAS:
+A) [ ] I, apenas.
+B) [ ] I e II, apenas.
+C) [ ] I e III, apenas.
+D) [ ] II e III, apenas.
+E) [X] I, II e III.
+
+==================================================
+
+QUESTÃO 5
+--------------------
+Analise o código com ponteiros e determine a saída impressa.
+
+ALTERNATIVAS:
+A) [X] 3, 3, 3, 1, 2
+B) [ ] 3, 3, 3, 1, 3
+C) [ ] 3, 5, 3, 1, 2
+D) [ ] 3, 5, 3, 2, 2
+E) [ ] 3, 5, 3, 2, 3
+
+==================================================
+
+QUESTÃO 6
+--------------------
+Sobre filas estáticas, avalie as afirmações sobre funções void e deslocamento de dados.
+
+ALTERNATIVAS:
+A) [ ] I, apenas.
+B) [ ] I e II, apenas.
+C) [X] I e III, apenas.
+D) [ ] II e III, apenas.
+E) [ ] I, II e III.
+
+==================================================
+
+QUESTÃO 7
+--------------------
+Qual a sintaxe correta para alocar memória para um inteiro usando malloc()?
+
+ALTERNATIVAS:
+A) [ ] ptr = malloc(int)
+B) [ ] ptr = (int)malloc
+C) [ ] ptr = (int *) malloc(int)
+D) [ ] ptr = malloc(sizeof (int))
+E) [X] ptr = (int *) malloc(sizeof (int))
+
+==================================================
+
+QUESTÃO 8
+--------------------
+Qual estrutura de dados é mais adequada para armazenar informações de alunos (nome, idade, sexo, curso, média)?
+
+ALTERNATIVAS:
+A) [ ] Fila
+B) [ ] Pilha
+C) [X] Registro
+D) [ ] Árvore binária
+E) [ ] Lista encadeada
+
+==================================================
+
+QUESTÃO 9
+--------------------
+Qual a função do operador de referência (&) em ponteiros na linguagem C?
+
+ALTERNATIVAS:
+A) [X] Retorna o endereço de memória da variável.
+B) [ ] Aloca dinamicamente memória para a variável.
+C) [ ] Libera a memória alocada dinamicamente.
+D) [ ] Retorna o valor contido na posição de memória.
+E) [ ] Desreferencia o ponteiro.
+
+==================================================
+
+QUESTÃO 10
+--------------------
+Avalie as asserções sobre pilhas (LIFO) e filas (FIFO) e sua relação.
+
+ALTERNATIVAS:
+A) [ ] As asserções I e II são verdadeiras e II justifica I.
+B) [X] As asserções I e II são verdadeiras, mas II não justifica I.
+C) [ ] A asserção I é verdadeira e II é falsa.
+D) [ ] A asserção I é falsa e II é verdadeira.
+E) [ ] As asserções I e II são falsas.
+
+==================================================
+
