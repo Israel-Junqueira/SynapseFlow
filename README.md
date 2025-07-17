@@ -1,4 +1,4 @@
-# SynapseFlow
+# SynapseFlow não esta mais funcional
 
 Aqui está o arquivo `README.md` para o seu projeto SynapseFlow, incluindo todas as instruções de instalação e configuração necessárias:
 
