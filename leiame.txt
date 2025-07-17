@@ -1,0 +1,12 @@
+python -m pip install requests beautifulsoup4 google-generativeai selenium webdriver-manager
+
+npm install # ou yarn install
+
+$env:PYTHONIOENCODING="utf-8"
+npm run dev
+
+python -m pip install --upgrade webdriver-manager
+Remove-Item -Path .next -Recurse -Force
+
+
+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 groqcoud
