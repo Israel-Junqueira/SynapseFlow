@@ -1,10 +1,10 @@
-QUESTÃO 1: D) [X] I e II, apenas.
-QUESTÃO 2: D) [X] II, III e IV, apenas.
-QUESTÃO 3: D) [X] I e II, apenas.
-QUESTÃO 4: E) [X] I, II e III.
-QUESTÃO 5: A) [X] 3, 3, 3, 1, 2
-QUESTÃO 6: C) [X] I e III, apenas.
-QUESTÃO 7: E) [X] ptr = (int *) malloc(sizeof (int))
-QUESTÃO 8: C) [X] Registro
-QUESTÃO 9: A) [X] Retorna o endereço de memória da variável.
-QUESTÃO 10: B) [X] As asserções I e II são verdadeiras, mas II não justifica I.
+QUESTÃO 1: E) [X] I, II e III.
+QUESTÃO 2: B) [X] I e II, apenas.
+QUESTÃO 3: E) [X] Indicar ao navegador qual especificação de código HTML está sendo utilizada.
+QUESTÃO 4: C) [X] Compilação automática, transpilação binária e otimização algorítmica.
+QUESTÃO 5: C) [X] const numeroAleatorio = perguntas => Math.floor(Math.random() * perguntas.length);
+QUESTÃO 6: E) [X] I, II e III.
+QUESTÃO 7: B) [X] As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.
+QUESTÃO 8: B) [X] As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.
+QUESTÃO 9: E) [X] Permitir que os web designers assumam controle sobre as dimensões e escalonamento da exibição da página.
+QUESTÃO 10: B) [X] document.getElementById("perguntaAtual").innerHTML = "Nova pergunta";

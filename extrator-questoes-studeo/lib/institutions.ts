@@ -1,7 +1,7 @@
 // lib/institutions.ts
 
-import type { Institution } from "@/"
-"@/types/app"
+import type { Institution } from "@/types/app"
+
 export const predefinedInstitutions: Institution[] = [
   {
     id: "unicesumar",

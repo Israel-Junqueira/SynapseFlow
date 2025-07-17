@@ -3,131 +3,131 @@ QUESTÕES - ESTRUTURAS DE DADOS
 
 QUESTÃO 1
 --------------------
-Um dos temas que diferenciam a linguagem C das demais linguagens é a possibilidade de podermos manipular a memória de um dispositivo computacional através dos ponteiros. Com base no código apresentado, avalie as afirmações sobre ponteiros.
+O desenvolvimento de interfaces web responsivas é essencial na atualidade, dada a variedade de dispositivos utilizados para acesso à internet. Uma das estratégias para adaptar o layout ao tamanho da tela é o uso de media queries em CSS.Fonte: Elaborado pelo professor, 2025.Considere o seguinte trecho de código:@media screen and (max-width: 800px) {main {flex-direction: column;}}Com base no funcionamento das media queries e nos princípios de design responsivo, analise as afirmativas abaixo:I. A propriedade flex-direction: column será aplicada apenas se a mídia for de tipo “tela” e a largura máxima for de 800 pixels.II. Fora dessa condição (por exemplo, em uma tela de 1024px de largura), o layout manterá o estilo definido anteriormente para o elemento main.III. O uso da diretiva @media permite sobrescrever seletivamente propriedades CSS, sem alterar a estrutura HTML, favorecendo a adaptabilidade do layout.É correto o que se afirma em:
 
 ALTERNATIVAS:
 A) [ ] I, apenas.
 B) [ ] II, apenas.
 C) [ ] III, apenas.
-D) [X] I e II, apenas.
-E) [ ] II e III, apenas.
+D) [ ] I e II, apenas.
+E) [X] I, II e III.
 
 ==================================================
 
 QUESTÃO 2
 --------------------
-Sobre ponteiros em C, analise as afirmações sobre alocação dinâmica, tipos de dados e armazenamento de endereços.
+Em linguagens de programação, variáveis são utilizadas para armazenar informações temporárias durante a execução de um programa. Em linguagens fortemente tipadas, como C ou Java, é necessário declarar previamente o tipo de dado que será armazenado. Já o JavaScript, por ser uma linguagem dinamicamente tipada, permite que o tipo seja determinado automaticamente com base no valor atribuído à variável.Para declarar variáveis em JavaScript, três palavras-chave podem ser utilizadas:var, presente nas versões mais antigas, permite escopos amplos e pode causar efeitos colaterais indesejados.let, ideal para variáveis que precisam ter seus valores modificados ao longo da execução.const, adequada para variáveis cujos valores não devem ser alterados após a atribuição inicial.A escolha adequada entre essas palavras-chave afeta diretamente a legibilidade, segurança e previsibilidade do código, sendo um aspecto essencial da escrita de programas mais robustos e livres de erros. Durante o desenvolvimento de uma aplicação web interativa em JavaScript, um grupo de estudantes ficou responsável por criar a lógica de controle de rodadas e perguntas de um jogo de perguntas e respostas. Ao iniciar a programação, surgiram dúvidas sobre a melhor forma de declarar variáveis que armazenam a pontuação do jogador e o número total de perguntas do jogo.Fonte: NOEL, A. A. -Programação Front End. Florianópolis, SC: Arqué, 2025.Considerando boas práticas na declaração de variáveis em JavaScript moderno, analise as afirmativas:​I. A pontuação do jogador, que pode variar ao longo do jogo, deve ser declarada utilizando let.II. O número total de perguntas, que permanece constante durante a execução, deve ser declarado utilizando const.III. Para garantir compatibilidade com navegadores antigos, é recomendável usar var em vez de let e const.É correto o que se afirma em:
 
 ALTERNATIVAS:
-A) [ ] I e II, apenas.
-B) [ ] III e IV, apenas.
-C) [ ] I, II e IV, apenas.
-D) [X] II, III e IV, apenas.
-E) [ ] I, II, III e IV.
+A) [ ] I, apenas.
+B) [ ] I e II, apenas.
+C) [ ] II e III, apenas.
+D) [ ] III, apenas.
+E) [X] I, II e III, apenas.
 
 ==================================================
 
 QUESTÃO 3
 --------------------
-Sobre structs em C, avalie o código apresentado e as afirmações sobre armazenamento de dados e sintaxe.
+O Doctype indica para o navegador e para outros meios qual a especificação de código utilizar. Ele não é uma tag do HTML, mas uma instrução para que o browser tenha informações sobre qual versão de código a marcação foi escrita. Esta declaração deve ser a primeira linha em um documento HTML e é fundamental para garantir que o navegador interprete o código corretamente. Ao longo da evolução da web, diferentes versões de Doctype foram utilizadas, refletindo a evolução dos padrões HTML. No HTML5, a declaração foi simplificada para<!DOCTYPE html>, em contraste com as declarações mais longas e complexas das versões anteriores que exigiam referências a DTDs (Document Type Definitions) específicos.Fonte: TOKUMOTO, R. C.Programação Front End. Maringá, PR: UniCesumar, 2018.Com base no texto apresentado, sobre a função do Doctype em um documento HTML, assinale a alternativa correta:
 
 ALTERNATIVAS:
-A) [ ] I, apenas.
-B) [ ] II, apenas.
-C) [ ] III, apenas.
-D) [X] I e II, apenas.
-E) [ ] II e III, apenas.
+A) [ ] Definir o título da página web.
+B) [ ] Definir a estrutura do corpo do documento.
+C) [ ] Estabelecer as regras de CSS a serem aplicadas.
+D) [ ] Configurar as meta tags para otimização em motores de busca.
+E) [X] Indicar ao navegador qual especificação de código HTML está sendo utilizada.
 
 ==================================================
 
 QUESTÃO 4
 --------------------
-Sobre pilhas estáticas implementadas com vetores, avalie as afirmações sobre capacidade e funcionamento.
+Desde o seu surgimento, a linguagem Javascript sempre foi considerada, por alguns, uma linguagem limitada e sem muitas possibilidades além de pequenos efeitos e interações em páginas de web. Com o tempo, o Javascript passou por diversas atualizações que introduziram recursos poderosos e mais eficientes. No ES6, ou seja, no ECMAScript 2015, e nas versões seguintes, surgiram diversos recursos modernos que transformaram a forma de programar. Esses elementos contribuíram para modernizar o código, tornando-o mais legível e fácil de manter. Com a utilização desses elementos modernos, desenvolveremos um pedaço de um jogo para incorporar alguns desses recursos, iniciando pela desestruturação dearrayse objetos. Uma aplicação relativamente simples, mas que ajuda a entender o funcionamento do desenvolvimentofront-end, seria um jogo de perguntas e respostas, o famoso jogo de trívia.Fonte: NOEL, A. A.Programação Front End. Florianópolis: Arqué, 2025.Com base no texto apresentado, quanto aos recursos introduzidos no ECMAScript 2015 (ES6) contribuíram para tornar o código JavaScript mais legível e fácil de manter, assinale a alternativa correta:
+
+ALTERNATIVAS:
+A) [ ] PHP, MySQL, Apache e Node.js.
+B) [ ] Frameworkscomo React, Angular, Vue.js e JQuery.
+C) [ ] Compilação automática, transpilação binária e otimização algorítmica.
+D) [ ] Programação orientada a objetos,Machine Learninge gerenciamento de banco de dados.
+E) [X] Arrow functions, desestruturação de objetos earrays, operador de espalhamento e módulos.
+
+==================================================
+
+QUESTÃO 5
+--------------------
+Em jogos digitais simples baseados em HTML e JavaScript, é comum vermos a utilização de estruturas organizadas para armazenar dados, bem como a aplicação de funções para modular o comportamento do jogo. Uma prática recorrente é definir perguntas e alternativas em um array de objetos e criar uma função que manipula o DOM para exibir os dados dinamicamente. Com o uso de getElementById e querySelector, esses dados podem ser distribuídos em elementos da interface. O uso dearrow functionspode tornar o código mais enxuto, principalmente quando se lida com comportamentos simples, como gerar números aleatórios ou retornar valores diretos.Durante o desenvolvimento de um jogo de perguntas e respostas com JavaScript, um estudante decidiu criar uma função para sortear uma pergunta do array perguntas. A ideia era gerar um número aleatório para selecionar uma posição válida dentro do array.Fonte: NOEL, A. A. -Programação Front End. Florianópolis, SC: Arqué, 2025.Com base no texto apresentado, considerando as boas práticas e os recursos da linguagem JavaScript moderna (ES6), assinale qual das alternativas abaixo representa a maneira mais apropriada e concisa de criar essa função:
+
+ALTERNATIVAS:
+A) [ ] const numeroAleatorio = () => Math.floor(Math.random() + perguntas.length);
+B) [ ] const numeroAleatorio = perguntas => {   return Math.random() * perguntas.length; }
+C) [X] const numeroAleatorio = perguntas => Math.floor(Math.random() * perguntas.length);
+D) [ ] function numeroAleatorio() {return perguntas.length / Math.random();}
+E) [ ] function numeroAleatorio(perguntas) {return Math.floor(Math.random()) * perguntas.length;}
+
+==================================================
+
+QUESTÃO 6
+--------------------
+A linguagem JavaScript tem papel central na manipulação dinâmica de páginas web. Sua sintaxe remete à linguagem C, com blocos delimitados por chaves, mas difere ao apresentar tipagem fraca e dinâmica.Fonte: Elaborado pelo professor, 2025.Considere o trecho a seguir inserido dentro de uma página HTML:<script>document.body.style.backgroundColor = "blue";</script>Com base nas informações do código e nos conceitos apresentados, analise as afirmativas:I. O código JavaScript altera dinamicamente o estilo da página, modificando a cor de fundo do elemento <body> diretamente via DOM.II. Por ser fracamente tipada, a linguagem JavaScript permite que uma variável que inicialmente recebe um número seja posteriormente atribuída a uma string, sem erro de compilação.III. A estrutura típica de um projeto web utiliza arquivos separados para HTML, CSS e JavaScript com o objetivo de manter a organização, modularidade e reutilização de código.É correto o que se afirma em:
 
 ALTERNATIVAS:
 A) [ ] I, apenas.
-B) [ ] I e II, apenas.
+B) [ ] II, apenas.
 C) [ ] I e III, apenas.
 D) [ ] II e III, apenas.
 E) [X] I, II e III.
 
 ==================================================
 
-QUESTÃO 5
---------------------
-Analise o código com ponteiros e determine a saída impressa.
-
-ALTERNATIVAS:
-A) [X] 3, 3, 3, 1, 2
-B) [ ] 3, 3, 3, 1, 3
-C) [ ] 3, 5, 3, 1, 2
-D) [ ] 3, 5, 3, 2, 2
-E) [ ] 3, 5, 3, 2, 3
-
-==================================================
-
-QUESTÃO 6
---------------------
-Sobre filas estáticas, avalie as afirmações sobre funções void e deslocamento de dados.
-
-ALTERNATIVAS:
-A) [ ] I, apenas.
-B) [ ] I e II, apenas.
-C) [X] I e III, apenas.
-D) [ ] II e III, apenas.
-E) [ ] I, II e III.
-
-==================================================
-
 QUESTÃO 7
 --------------------
-Qual a sintaxe correta para alocar memória para um inteiro usando malloc()?
+A união entre HTML e CSS tem ficado mais forte com o passar do tempo e à medida que são implementadas novas versões, é certo que essa união tende a ser duradoura, a menos que surja alguma revolução no desenvolvimento da Internet e que essas linguagens não sejam capazes de acompanhar. É importante perceber que, mesmo tendo uma grande quantidade de comandos disponíveis nas duas linguagens, algumas regras são essenciais e devem ser respeitadas. Isso serve para melhorar a qualidade e a compatibilidade entre um código criado e uma das opções de navegadores disponíveis. Regras como fechamento de todas as tags abertas, padronização do código em letras minúsculas e inclusão de todos os elementos essenciais ao código são características que melhoram a compatibilidade, além de serem alguns requisitos da versão HTML 5.Fonte: Elaborado pelo professor, 2025.Fonte: TOKUMOTO, Ronie Cesar.Programação Front End.Maringá-PR: Unicesumar, 2018.Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.I. Para garantir a melhor compatibilidade com os navegadores em HTML5, os desenvolvedores devem seguir regras específicas de codificaçãoPORQUEII. Práticas como fechar todas as tags, usar letras minúsculas consistentemente e incluir elementos essenciais são requisitos da versão HTML5 que melhoram a compatibilidade entre diferentes navegadores.A respeito dessas asserções, assinale a opção correta:
 
 ALTERNATIVAS:
-A) [ ] ptr = malloc(int)
-B) [ ] ptr = (int)malloc
-C) [ ] ptr = (int *) malloc(int)
-D) [ ] ptr = malloc(sizeof (int))
-E) [X] ptr = (int *) malloc(sizeof (int))
+A) [ ] As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.
+B) [X] As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.
+C) [ ] A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
+D) [ ] A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
+E) [ ] As asserções I e II são proposições falsas.
 
 ==================================================
 
 QUESTÃO 8
 --------------------
-Qual estrutura de dados é mais adequada para armazenar informações de alunos (nome, idade, sexo, curso, média)?
+Tag é o nome dado aos comandos aceitos na linguagem html, funcionam de forma um pouco diferente de outras linguagens de programação compiladas, pois tags mal utilizadas não impedem que o código em si funcione. Assim, o navegador tem o princípio de interpretar e estruturar todas as tags que ele possa compreender e ignorar tags incorretas ou mal estruturadas de acordo com sua sintaxe. A lista de tags é longa e varia em função da versão da linguagem html e do navegador, que pode ou não ser totalmente compatível com cada tag. Nunca é cem por cento garantido que um código html seja totalmente funcional em qualquer equipamento, pois as diferentes opções de navegadores e suas versões e atualizações instaladas interferem no grau de compatibilidade entre navegador e código html.Fonte: Elaborado pelo professor, 2025.Fonte: TOKUMOTO, Ronie Cesar.Programação Front End. Maringá-PR: Unicesumar, 2018.Considerando as informações apresentadas, avalie as asserções a seguir e a relação proposta entre elas.I. O HTML é mais tolerante a erros de codificação do que linguagens de programação compiladas.PORQUEII. Os navegadores são projetados para interpretar as tags que reconhecem e ignorar aquelas que estão mal estruturadas ou que não fazem parte da versão HTML que suportam.A respeito dessas asserções, assinale a opção correta:
 
 ALTERNATIVAS:
-A) [ ] Fila
-B) [ ] Pilha
-C) [X] Registro
-D) [ ] Árvore binária
-E) [ ] Lista encadeada
+A) [ ] As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa correta da I.
+B) [X] As asserções I e II são proposições verdadeiras, e a II é uma justificativa correta da I.
+C) [ ] A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.
+D) [ ] A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.
+E) [ ] As asserções I e II são proposições falsas.
 
 ==================================================
 
 QUESTÃO 9
 --------------------
-Qual a função do operador de referência (&) em ponteiros na linguagem C?
+HTML5 introduziu um método para permitir que web designers possam assumir o controle sobre a janela de exibição, por meio do <meta> tag. Você deve incluir o elemento <meta> dentro da área de cabeçalho <HEAD> para indicar as propriedades de exibição em todas as suas páginas web: <meta name="viewport" content="width=device-width, initial-scale=1.0">. Um <meta> elemento viewport dá as instruções do navegador sobre como controlar dimensões e escalonamento da página.Fonte: TOKUMOTO, R. C.Programação Front End. Maringá, PR: UniCesumar, 2018.Com base no texto apresentado, sobre a função da tag <meta> com o atributo viewport no HTML5, assinale a alternativa correta:
 
 ALTERNATIVAS:
-A) [X] Retorna o endereço de memória da variável.
-B) [ ] Aloca dinamicamente memória para a variável.
-C) [ ] Libera a memória alocada dinamicamente.
-D) [ ] Retorna o valor contido na posição de memória.
-E) [ ] Desreferencia o ponteiro.
+A) [ ] Estabelecer os padrões de cores do website.
+B) [ ] Definir a estrutura básica do documento HTML.
+C) [ ] Determinar quais navegadores podem exibir a página.
+D) [ ] Configurar o acesso ao banco de dados da aplicação web.
+E) [X] Permitir que os web designers assumam controle sobre as dimensões e escalonamento da exibição da página.
 
 ==================================================
 
 QUESTÃO 10
 --------------------
-Avalie as asserções sobre pilhas (LIFO) e filas (FIFO) e sua relação.
+O DOM (Document Object Model) é uma interface de programação para documentos HTML e XML. Ele representa a página como uma estrutura em árvore, na qual cada elemento é um nó da árvore, permitindo que linguagens como o JavaScript acessem e modifiquem dinamicamente o conteúdo, estrutura e estilo do documento. No contexto de aplicações interativas, como jogos web, o DOM é fundamental para manipular elementos da interface, como botões, perguntas, pontuação e opções de resposta. Utilizando métodos específicos, como getElementById, querySelector, getElementsByTagName e querySelectorAll, é possível capturar elementos HTML e modificar suas propriedades, estilos e comportamentos.Por meio desses recursos, torna-se viável criar interfaces responsivas e dinâmicas, atualizando o conteúdo da página sem a necessidade de recarregá-la, o que melhora significativamente a experiência do usuário. Durante o desenvolvimento de um quiz interativo em JavaScript, um estudante precisa alterar dinamicamente o texto exibido em um parágrafo com o identificador perguntaAtual. Para isso, ele deve capturar esse elemento do DOM e substituir seu conteúdo por uma nova string, representando a próxima pergunta.Fonte: NOEL, A. A. -Programação Front End. Florianópolis, SC: Arqué, 2025.Com base no texto apresentado, sobre qual das instruções realiza corretamente a tarefa, assinale a alternativas correta.
 
 ALTERNATIVAS:
-A) [ ] As asserções I e II são verdadeiras e II justifica I.
-B) [X] As asserções I e II são verdadeiras, mas II não justifica I.
-C) [ ] A asserção I é verdadeira e II é falsa.
-D) [ ] A asserção I é falsa e II é verdadeira.
-E) [ ] As asserções I e II são falsas.
+A) [ ] document.getElementsById("perguntaAtual").value = "Nova pergunta";
+B) [X] document.getElementById("perguntaAtual").innerHTML = "Nova pergunta";
+C) [ ] document.querySelectorAll("#perguntaAtual").textContent = "Nova pergunta";
+D) [ ] document.getElementByTagName("perguntaAtual")[0].innerText = "Nova pergunta";
+E) [ ] let perguntaAtual = getElementById("perguntaAtual").innerHTML = "Nova pergunta";
 
 ==================================================
 

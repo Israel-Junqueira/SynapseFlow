@@ -5,19 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import {
-  Loader2,
-  CheckCircle,
-  XCircle,
-  Brain,
-  Send,
-  Timer,
-  Gamepad2,
-  Zap,
-  ChevronLeft,
-  Lock,
-  Unlock,
-} from "lucide-react"
+import { Loader2, CheckCircle, XCircle, Brain, Send, Timer, Gamepad2, Zap, ChevronLeft } from "lucide-react"
 import MinesweeperGame from "@/components/minesweeper-game"
 import PongGame from "@/components/pong-game"
 import { InstitutionSelector } from "@/components/institution-selector"
@@ -27,7 +15,7 @@ import { AppSidebar } from "@/components/app-sidebar"
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
 import { getAllInstitutions } from "@/lib/institutions"
 import { HelpContent } from "@/components/help-content"
-import type { Institution, AppStep, FormField, FormFieldType } from "@/types/app"
+import type { Institution, AppStep } from "@/types/app" // Importa AppStep
 
 // Estimativa de tempo total para o processo em milissegundos (1 minuto e 40 segundos)
 const TOTAL_ESTIMATED_PROCESS_TIME = 100 * 1000 // 100 segundos
@@ -35,12 +23,10 @@ const TOTAL_ESTIMATED_PROCESS_TIME = 100 * 1000 // 100 segundos
 export default function CyberFuturisticProcessor() {
   // --- Estados da Aplicação ---
   const [currentStep, setCurrentStep] = useState<AppStep>("welcome")
-  const [unlockedSteps, setUnlockedSteps] = useState<AppStep[]>(["welcome"]) // Controla etapas desbloqueadas
   const [selectedInstitution, setSelectedInstitution] = useState<Institution | null>(null)
   const [formData, setFormData] = useState<{ [key: string]: string }>({})
   const [apiKey, setApiKey] = useState("")
   const [formSubmitUrl, setFormSubmitUrl] = useState("")
-  const [requiresLogin, setRequiresLogin] = useState<boolean | null>(null) // Novo estado para login
 
   // --- Estados de Processamento e Feedback ---
   const [status, setStatus] = useState("idle") // idle, processing, success, error
@@ -77,9 +63,8 @@ export default function CyberFuturisticProcessor() {
       setApiKey(localStorage.getItem("apiKey") || "")
       setFormSubmitUrl(localStorage.getItem("formSubmitUrl") || "")
 
-      // Sempre começa na tela de boas-vindas, mas carrega dados para preenchimento
+      // Sempre começa na tela de boas-vindas
       setCurrentStep("welcome")
-      setUnlockedSteps(["welcome"]) // Garante que apenas a primeira etapa esteja desbloqueada no início
 
       // Carregar e inicializar contadores de API
       const storedDailyCalls = localStorage.getItem("dailyCalls")
@@ -165,21 +150,13 @@ export default function CyberFuturisticProcessor() {
 
   const handleSelectInstitution = useCallback((institution: Institution) => {
     setSelectedInstitution(institution)
-    setUnlockedSteps((prev) => Array.from(new Set([...prev, "select_institution", "ask_login_requirement"])))
-    setCurrentStep("ask_login_requirement")
+    setCurrentStep("enter_credentials")
     setMessage("") // Limpa mensagens ao mudar de etapa
   }, [])
 
   const handleBackToInstitutionSelect = useCallback(() => {
     setSelectedInstitution(null)
-    setRequiresLogin(null) // Resetar estado de login
     setCurrentStep("select_institution")
-    setMessage("")
-  }, [])
-
-  const handleBackToLoginRequirement = useCallback(() => {
-    setRequiresLogin(null)
-    setCurrentStep("ask_login_requirement")
     setMessage("")
   }, [])
 
@@ -188,36 +165,24 @@ export default function CyberFuturisticProcessor() {
     setMessage("")
   }, [])
 
-  const handleBackToPublicExamUrl = useCallback(() => {
-    setCurrentStep("enter_exam_url_public")
+  const handleBackToResults = useCallback(() => {
+    setCurrentStep("view_results")
     setMessage("")
   }, [])
 
-  const handleStepNavigation = useCallback(
-    (stepId: AppStep) => {
-      // Não permite navegação manual para 'processing'
-      if (stepId === "processing") {
-        setMessage("O passo de processamento é automático e não pode ser acessado diretamente.")
-        return
-      }
-      if (unlockedSteps.includes(stepId)) {
-        setCurrentStep(stepId)
-        setMessage("") // Limpa mensagens ao navegar
-      } else {
-        setMessage("Por favor, complete as etapas anteriores para avançar.")
-      }
-    },
-    [unlockedSteps],
-  )
+  const handleStepNavigation = useCallback((stepName: AppStep) => {
+    // Lógica para permitir navegação entre passos
+    // Pode adicionar validações aqui se quiser impedir o avanço sem preencher campos
+    setCurrentStep(stepName)
+    setMessage("") // Limpa mensagens ao navegar
+  }, [])
 
   const handleResetJourney = useCallback(() => {
     setCurrentStep("welcome")
-    setUnlockedSteps(["welcome"])
     setSelectedInstitution(null)
     setFormData({})
     setApiKey("")
     setFormSubmitUrl("")
-    setRequiresLogin(null)
     setAnswers("")
     setStatus("idle")
     setProcessingMessage("Aguardando início...")
@@ -253,19 +218,9 @@ export default function CyberFuturisticProcessor() {
       return
     }
 
-    // Validação dos campos obrigatórios com base no fluxo de login
-    let fieldsToValidate: FormField[] = []
-    if (requiresLogin) {
-      fieldsToValidate = selectedInstitution.fields.filter((field) => field.id !== "examUrl" && field.required)
-      if (!formData.examUrl) {
-        setMessage("Por favor, preencha a URL da Prova.")
-        return
-      }
-    } else {
-      fieldsToValidate = selectedInstitution.fields.filter((field) => field.id === "examUrl" && field.required)
-    }
-
-    for (const field of fieldsToValidate) {
+    // Validação dos campos obrigatórios da instituição
+    const requiredFields = selectedInstitution.fields.filter((field) => field.required)
+    for (const field of requiredFields) {
       if (!formData[field.id]) {
         setMessage(`Por favor, preencha o campo obrigatório: ${field.label}.`)
         return
@@ -283,29 +238,25 @@ export default function CyberFuturisticProcessor() {
     setProcessingStartTime(Date.now())
     setRemainingTime(TOTAL_ESTIMATED_PROCESS_TIME)
     setProcessingMessage("Iniciando processamento...")
-    setCurrentStep("processing") // Navega para a tela de processamento imediatamente
 
     // Adiciona um pequeno atraso para garantir que a tela de processamento seja renderizada
     await new Promise((resolve) => setTimeout(resolve, 500))
 
     try {
-      // 1. Baixar o HTML usando Selenium (com login ou sem)
       setProcessingMessage("1/3: Fazendo Login e Baixando HTML da Prova...")
       let response = await fetch("/api/fetch-html", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          username: requiresLogin ? formData.username : undefined,
-          password: requiresLogin ? formData.password : undefined,
-          examUrl: formData.examUrl,
-          requiresLogin: requiresLogin, // Passa a flag para o backend
+          username: formData.username, // Assumindo que 'username' é sempre o campo de usuário
+          password: formData.password, // Assumindo que 'password' é sempre o campo de senha
+          examUrl: formData.examUrl, // Assumindo que 'examUrl' é sempre o campo da URL da prova
         }),
       })
       let data = await response.json()
       if (!response.ok) throw new Error(data.error || "Erro ao baixar HTML.")
       setMessage("HTML baixado com sucesso!")
 
-      // 2. Extrair as questões
       setProcessingMessage("2/3: Extraindo Questões do Conteúdo Baixado...")
       response = await fetch("/api/extract-questions", {
         method: "POST",
@@ -315,7 +266,6 @@ export default function CyberFuturisticProcessor() {
       if (!response.ok) throw new Error(data.error || "Erro ao extrair questões.")
       setMessage("Questões extraídas com sucesso!")
 
-      // 3. Resolver as questões com a IA
       setProcessingMessage("3/3: Resolvendo Questões com Inteligência Artificial (Groq)...")
       response = await fetch("/api/resolve-questions", {
         method: "POST",
@@ -336,8 +286,6 @@ export default function CyberFuturisticProcessor() {
       setStatus("success")
       setMessage(data.message || "Processamento concluído com sucesso!")
       setAnswers(data.answers || "Nenhuma resposta gerada.")
-      // Desbloqueia e navega automaticamente para a tela de resultados
-      setUnlockedSteps((prev) => Array.from(new Set([...prev, "view_results"])))
       setCurrentStep("view_results")
       setProcessingStartTime(null)
 
@@ -346,12 +294,7 @@ export default function CyberFuturisticProcessor() {
     } catch (error) {
       setStatus("error")
       setMessage(`Erro no processamento: ${error instanceof Error ? error.message : String(error)}`)
-      // Volta para a etapa anterior com base no fluxo
-      if (requiresLogin) {
-        setCurrentStep("enter_api_key")
-      } else {
-        setCurrentStep("enter_api_key") // Ou enter_exam_url_public se for o caso
-      }
+      setCurrentStep(selectedInstitution ? "enter_api_key" : "select_institution") // Volta para a etapa anterior ou inicial
       setProcessingStartTime(null)
     }
   }
@@ -387,8 +330,6 @@ export default function CyberFuturisticProcessor() {
         setStatus("success")
         setMessage(data.message || "Respostas enviadas para o formulário com sucesso!")
         setProcessingMessage("Respostas Enviadas!")
-        setUnlockedSteps((prev) => Array.from(new Set([...prev, "send_answers"])))
-        setCurrentStep("send_answers")
       } else {
         setStatus("error")
         setMessage(data.error || "Erro ao enviar respostas para o formulário.")
@@ -422,98 +363,45 @@ export default function CyberFuturisticProcessor() {
 
   const handleNavigateHelp = useCallback((section: string) => {
     setHelpSection(section)
-    setUnlockedSteps((prev) => Array.from(new Set([...prev, "help"])))
     setCurrentStep("help")
   }, [])
 
   const steps = useMemo(() => {
-    const baseSteps: { name: string; id: AppStep }[] = [
-      { name: "Bem-vindo", id: "welcome" },
-      { name: "Instituição", id: "select_institution" },
-      { name: "Login?", id: "ask_login_requirement" },
-      { name: "Credenciais", id: "enter_credentials" }, // Este será condicionalmente visível
-      { name: "URL Prova", id: "enter_exam_url_public" }, // Este será condicionalmente visível
-      { name: "API Key", id: "enter_api_key" },
-      // Removido "processing" como um passo clicável, pois é um estado automático
-      { name: "Resultados", id: "view_results" },
-    ]
+    // Mapeia os nomes das etapas para os nomes de AppStep
+    const stepMap: { [key: string]: AppStep } = {
+      "Bem-vindo": "welcome",
+      Instituição: "select_institution",
+      Credenciais: "enter_credentials",
+      "API Key": "enter_api_key",
+      Processando: "processing",
+      Resultados: "view_results",
+      "Enviar Respostas": "send_answers",
+      Ajuda: "help",
+    }
 
-    // Filtra os passos para exibir apenas os relevantes no StepIndicator
-    return baseSteps.filter((step) => {
-      if (step.id === "enter_credentials" && requiresLogin !== true) return false
-      if (step.id === "enter_exam_url_public" && requiresLogin !== false) return false
-      return true
-    })
-  }, [requiresLogin])
+    const baseSteps = ["Bem-vindo", "Instituição", "Credenciais", "API Key", "Processando", "Resultados"]
+    let finalSteps = baseSteps
+
+    if (currentStep === "send_answers") {
+      finalSteps = [...baseSteps, "Enviar Respostas"]
+    } else if (currentStep === "help") {
+      finalSteps = [...baseSteps, "Ajuda"]
+    }
+
+    return finalSteps.map((name) => ({
+      name,
+      id: stepMap[name] || "welcome", // Garante que cada passo tenha um ID AppStep
+    }))
+  }, [currentStep])
 
   const currentStepIndex = useMemo(() => {
-    const stepIds = steps.map((s) => s.id)
-    return stepIds.indexOf(currentStep)
+    const stepNames = steps.map((s) => s.id)
+    return stepNames.indexOf(currentStep)
   }, [currentStep, steps])
-
-  // Campos para o formulário de credenciais ou URL pública
-  const formFields = useMemo(() => {
-    if (!selectedInstitution) return []
-
-    if (requiresLogin) {
-      // Campos de login + URL da prova
-      return selectedInstitution.fields
-        .filter((field) => field.id !== "examUrl")
-        .concat([
-          {
-            id: "examUrl",
-            label: "URL da Prova",
-            type: "url" as FormFieldType, // Adiciona o casting explícito
-            placeholder: "https://studeo.unicesumar.edu.br/#!/app/studeo/aluno/ambiente/disciplina/...",
-            helpText: "Cole aqui a URL completa da página da prova que você deseja resolver.",
-            required: true,
-          },
-        ])
-    } else if (requiresLogin === false) {
-      // Apenas URL da prova para sites públicos
-      return [
-        {
-          id: "examUrl",
-          label: "URL da Prova",
-          type: "url" as FormFieldType, // Adiciona o casting explícito
-          placeholder: "https://exemplo.com/prova-publica",
-          helpText: "Cole aqui a URL completa da página da prova que você deseja resolver.",
-          required: true,
-        },
-      ]
-    }
-    return []
-  }, [selectedInstitution, requiresLogin])
-
-  const handleSubmitCredentialsOrUrl = useCallback(() => {
-    // Validação básica antes de avançar para API Key
-    const currentFields = formFields
-    for (const field of currentFields) {
-      if (field.required && !formData[field.id]) {
-        setMessage(`Por favor, preencha o campo obrigatório: ${field.label}.`)
-        return
-      }
-    }
-    setUnlockedSteps((prev) =>
-      Array.from(
-        new Set([
-          ...prev,
-          currentStep, // Desbloqueia a etapa atual
-          "enter_api_key", // Desbloqueia a próxima etapa
-        ]),
-      ),
-    )
-    setCurrentStep("enter_api_key")
-    setMessage("")
-  }, [formFields, formData, currentStep])
 
   return (
     <SidebarProvider>
-      <AppSidebar
-        onNavigateHelp={handleNavigateHelp}
-        onResetJourney={handleResetJourney}
-        unlockedSteps={unlockedSteps}
-      />
+      <AppSidebar onNavigateHelp={handleNavigateHelp} onResetJourney={handleResetJourney} />
       <SidebarInset className="relative flex min-h-svh flex-1 flex-col bg-[#1a1a2e]">
         <header className="flex h-16 shrink-0 items-center gap-2 border-b border-[#3a3a5a] px-4 bg-[#1a1a2e]/50">
           <SidebarTrigger className="-ml-1" />
@@ -521,12 +409,7 @@ export default function CyberFuturisticProcessor() {
         </header>
         <div className="flex flex-1 flex-col items-center justify-center p-6 font-mono relative overflow-hidden">
           {currentStep !== "processing" && (
-            <StepIndicator
-              steps={steps}
-              currentStepIndex={currentStepIndex}
-              onStepClick={handleStepNavigation}
-              unlockedSteps={unlockedSteps}
-            />
+            <StepIndicator steps={steps} currentStepIndex={currentStepIndex} onStepClick={handleStepNavigation} />
           )}
 
           {currentStep === "welcome" && (
@@ -554,10 +437,7 @@ export default function CyberFuturisticProcessor() {
                   Vamos começar? Clique em "Iniciar" para escolher sua instituição.
                 </p>
                 <Button
-                  onClick={() => {
-                    setUnlockedSteps((prev) => Array.from(new Set([...prev, "select_institution"])))
-                    setCurrentStep("select_institution")
-                  }}
+                  onClick={() => setCurrentStep("select_institution")}
                   className="w-full bg-[#a020f0] hover:bg-[#8a1acb] text-white font-bold py-2 px-4 rounded-md transition-colors duration-200"
                 >
                   Iniciar
@@ -574,78 +454,25 @@ export default function CyberFuturisticProcessor() {
             />
           )}
 
-          {currentStep === "ask_login_requirement" && selectedInstitution && (
-            <Card className="w-full max-w-3xl bg-[#2a2a4a] border-[#3a3a5a] shadow-lg shadow-[#a020f0]/20 z-10">
-              <CardHeader className="border-b border-[#3a3a5a] pb-4">
-                <Button
-                  onClick={handleBackToInstitutionSelect}
-                  variant="ghost"
-                  className="absolute top-4 left-4 text-gray-400 hover:text-white"
-                >
-                  <ChevronLeft className="h-5 w-5 mr-2" /> Voltar
-                </Button>
-                <CardTitle className="text-3xl font-bold text-[#a020f0] flex items-center justify-center">
-                  <Lock className="mr-3 h-8 w-8" />
-                  Acesso à Prova
-                </CardTitle>
-                <CardDescription className="text-gray-300 mt-2 text-center">
-                  O site da {selectedInstitution.name} exige login para acessar a prova?
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pt-6 space-y-4">
-                <Button
-                  onClick={() => {
-                    setRequiresLogin(true)
-                    setUnlockedSteps((prev) => Array.from(new Set([...prev, "enter_credentials"])))
-                    setCurrentStep("enter_credentials")
-                  }}
-                  className="w-full bg-[#a020f0] hover:bg-[#8a1acb] text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Lock className="mr-2 h-5 w-5" /> Sim, exige login
-                </Button>
-                <Button
-                  onClick={() => {
-                    setRequiresLogin(false)
-                    setUnlockedSteps((prev) => Array.from(new Set([...prev, "enter_exam_url_public"])))
-                    setCurrentStep("enter_exam_url_public")
-                  }}
-                  className="w-full bg-[#3a3a5a] hover:bg-[#4a4a6a] text-gray-100 font-bold py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Unlock className="mr-2 h-5 w-5" /> Não, é público
-                </Button>
-                {message && (
-                  <div
-                    className={`p-3 rounded-md text-sm ${status === "error" ? "bg-red-900/30 text-red-300 border border-red-700" : "bg-green-900/30 text-green-300 border border-green-700"}`}
-                  >
-                    {message}
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+          {currentStep === "enter_credentials" && selectedInstitution && (
+            <InstitutionForm
+              institution={selectedInstitution}
+              formData={formData}
+              onFormDataChange={handleFormDataChange}
+              onSubmit={() => setCurrentStep("enter_api_key")}
+              onBack={handleBackToInstitutionSelect}
+              submitButtonText="Continuar para API Key"
+              isSubmitting={false}
+              message={message}
+              isError={status === "error"}
+            />
           )}
-
-          {(currentStep === "enter_credentials" || currentStep === "enter_exam_url_public") &&
-            selectedInstitution &&
-            requiresLogin !== null && (
-              <InstitutionForm
-                institution={selectedInstitution}
-                formData={formData}
-                onFormDataChange={handleFormDataChange}
-                onSubmit={handleSubmitCredentialsOrUrl}
-                onBack={handleBackToLoginRequirement}
-                submitButtonText="Continuar para API Key"
-                isSubmitting={false}
-                message={message}
-                isError={status === "error"}
-                fields={formFields} // Passa os campos dinamicamente
-              />
-            )}
 
           {currentStep === "enter_api_key" && selectedInstitution && (
             <Card className="w-full max-w-3xl bg-[#2a2a4a] border-[#3a3a5a] shadow-lg shadow-[#a020f0]/20 z-10">
               <CardHeader className="border-b border-[#3a3a5a] pb-4">
                 <Button
-                  onClick={requiresLogin ? handleBackToCredentials : handleBackToPublicExamUrl}
+                  onClick={handleBackToCredentials}
                   variant="ghost"
                   className="absolute top-4 left-4 text-gray-400 hover:text-white"
                 >

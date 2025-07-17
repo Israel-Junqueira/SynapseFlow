@@ -15,21 +15,17 @@ import {
   SidebarSeparator,
   useSidebar,
 } from "@/components/ui/sidebar"
-import { BookText, ChevronDown, CircleHelp, Home, Info, LifeBuoy, Link, Play } from "lucide-react" // Adicionado Play
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { BookText, ChevronDown, CircleHelp, Home, Info, LifeBuoy, Link } from "lucide-react" // Removido User2
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import type { AppStep } from "@/types/app" // Importa AppStep
 
 interface AppSidebarProps {
   onNavigateHelp: (section: string) => void
   onResetJourney: () => void // Nova prop para resetar a jornada
-  unlockedSteps: AppStep[] // Nova prop para saber quais etapas estão desbloqueadas
 }
 
-export function AppSidebar({ onNavigateHelp, onResetJourney, unlockedSteps }: AppSidebarProps) {
+export function AppSidebar({ onNavigateHelp, onResetJourney }: AppSidebarProps) {
   const { state } = useSidebar()
-
-  const isStepUnlocked = (stepId: AppStep) => unlockedSteps.includes(stepId)
 
   return (
     <Sidebar className="bg-[#1a1a2e] text-gray-100" collapsible="offcanvas">
@@ -45,7 +41,12 @@ export function AppSidebar({ onNavigateHelp, onResetJourney, unlockedSteps }: Ap
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-[--radix-popper-anchor-width] bg-[#2a2a4a] border-[#3a3a5a] text-gray-100">
-                {/* Removidos "Sobre o App" e "Configurações" */}
+                <DropdownMenuItem className="hover:bg-[#3a3a5a]">
+                  <span>Sobre o App</span>
+                </DropdownMenuItem>
+                <DropdownMenuItem className="hover:bg-[#3a3a5a]">
+                  <span>Configurações</span>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
           </SidebarMenuItem>
@@ -62,8 +63,8 @@ export function AppSidebar({ onNavigateHelp, onResetJourney, unlockedSteps }: Ap
                   onClick={onResetJourney} // Botão para resetar a jornada
                   className="text-gray-100 hover:bg-[#3a3a5a]"
                 >
-                  <Play /> {/* Ícone mais representativo para "Iniciar" */}
-                  <span>Iniciar</span>
+                  <Home />
+                  <span>Início (Reiniciar)</span>
                 </SidebarMenuButton>
               </SidebarMenuItem>
               <SidebarMenuItem>
@@ -136,6 +137,7 @@ export function AppSidebar({ onNavigateHelp, onResetJourney, unlockedSteps }: Ap
       </SidebarContent>
 
       <SidebarFooter>
+        {/* Removido o DropdownMenu "Usuário Anônimo" */}
         <div className="p-4 text-xs text-gray-500">SynapseFlow v1.0</div>
       </SidebarFooter>
       <SidebarRail />

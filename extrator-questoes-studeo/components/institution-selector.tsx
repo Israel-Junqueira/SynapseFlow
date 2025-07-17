@@ -2,13 +2,13 @@
 "use client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { School } from "lucide-react" // Removido PlusCircle
-import type { Institution } from "@/types/app"
+import { PlusCircle, School } from "lucide-react"
+import type { Institution } from "@/types/app" // Corrigido: Importa 'Institution' diretamente de types/app
 
 interface InstitutionSelectorProps {
   institutions: Institution[]
   onSelectInstitution: (institution: Institution) => void
-  onAddNewInstitution: () => void // Mantido para compatibilidade, mas não será usado ativamente
+  onAddNewInstitution: () => void
 }
 
 export function InstitutionSelector({
@@ -41,7 +41,14 @@ export function InstitutionSelector({
             </Button>
           ))}
         </div>
-        {/* Removido o botão "Adicionar Nova Instituição" para simplificar o fluxo */}
+        <Button
+          variant="secondary"
+          className="w-full bg-[#3a3a5a] hover:bg-[#4a4a6a] text-gray-100 flex items-center justify-center mt-4"
+          onClick={onAddNewInstitution}
+        >
+          <PlusCircle className="mr-2 h-5 w-5" />
+          Adicionar Nova Instituição (Em Breve)
+        </Button>
         <p className="text-sm text-gray-400 text-center mt-4">
           A funcionalidade de adicionar novas instituições está em desenvolvimento.
         </p>

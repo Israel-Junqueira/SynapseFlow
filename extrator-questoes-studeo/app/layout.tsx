@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SynapseFlow",
   description: "Automatize a extração e resolução de questões de provas online com IA.",
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({

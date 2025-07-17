@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ChevronLeft, HelpCircle, User } from "lucide-react"
-import type { Institution, FormField } from "@/types/app"
+import type { Institution, FormField } from "@/types/app" // Corrigido: Importa 'Institution' e 'FormField' diretamente de types/app
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 interface InstitutionFormProps {
@@ -20,8 +20,7 @@ interface InstitutionFormProps {
   isSubmitting: boolean
   message: string | null
   isError: boolean
-  children?: React.ReactNode
-  fields: FormField[] // Nova prop para campos dinâmicos
+  children?: React.ReactNode // Para renderizar a área de respostas ou outros elementos
 }
 
 export function InstitutionForm({
@@ -35,7 +34,6 @@ export function InstitutionForm({
   message,
   isError,
   children,
-  fields, // Usa a nova prop
 }: InstitutionFormProps) {
   const renderField = (field: FormField) => {
     const commonProps = {
@@ -89,7 +87,7 @@ export function InstitutionForm({
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-6 space-y-6">
-        {fields.map(renderField)} {/* Renderiza os campos passados via prop */}
+        {institution.fields.map(renderField)}
         <Button
           onClick={onSubmit}
           className="w-full bg-[#a020f0] hover:bg-[#8a1acb] text-white font-bold py-2 px-4 rounded-md transition-colors duration-200 flex items-center justify-center"
